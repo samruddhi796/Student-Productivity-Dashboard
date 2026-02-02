@@ -1,4 +1,5 @@
 from modules.task_manager import add_task, view_tasks, complete_task
+from modules.pomodoro import start_pomodoro, today_stats
 
 
 def menu():
@@ -6,7 +7,9 @@ def menu():
     print("1. Add Task")
     print("2. View Tasks")
     print("3. Complete Task")
-    print("4. Exit")
+    print("4. Start Pomodoro")
+    print("5. Pomodoro Stats (Today)")
+    print("6. Exit")
 
 
 def main():
@@ -21,6 +24,10 @@ def main():
         elif choice == '3':
             complete_task()
         elif choice == '4':
+            start_pomodoro()
+        elif choice == '5':
+            today_stats()
+        elif choice == '6':
             print("👋 Goodbye!")
             break
         else:
