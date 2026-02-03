@@ -2,6 +2,7 @@ from modules.task_manager import add_task, view_tasks, complete_task
 from modules.pomodoro import start_pomodoro, today_stats
 from modules.habit_tracker import add_habit, mark_habit_complete, view_habits
 from modules.stats import daily_summary
+from modules.report import generate_weekly_report
 
 
 def menu():
@@ -15,7 +16,8 @@ def menu():
     print("7. Mark Habit Complete")
     print("8. View Habits")
     print("9. Daily Productivity Summary")
-    print("10. Exit")
+    print("10. Generate Weekly Report")
+    print("11. Exit")
 
 
 def main():
@@ -42,6 +44,8 @@ def main():
         elif choice == '9':
             daily_summary()
         elif choice == '10':
+            generate_weekly_report()
+        elif choice == '11':
             print("👋 Goodbye!")
             break
         else:
@@ -49,4 +53,3 @@ def main():
 
 
 main()
-
